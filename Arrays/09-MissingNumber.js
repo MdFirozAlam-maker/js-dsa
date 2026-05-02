@@ -17,3 +17,4 @@ function FindingMissingNumber(arr) {
 }
 
 console.log(`We get the missing number`,FindingMissingNumber(arr))
+
