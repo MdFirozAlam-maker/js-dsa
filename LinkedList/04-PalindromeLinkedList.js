@@ -42,36 +42,36 @@ let head = newNode1;
 // }
 // return false;
 
-// function isPalindrome(head) {
-//   //finding the middle element
-//     let slow = head;
-//     let fast = head;
-//     while(fast && fast.next) {
-//       slow = slow.next;
-//       fast = fast.next.next;
-//     }
+function isPalindrome(head) {
+  //finding the middle element
+    let slow = head;
+    let fast = head;
+    while(fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
 
-//   //reverse the second half of list
-//   let prev = null;
-//   let curr = slow;
-//   while(curr) {
-//     let temp = curr.next;
-//     curr.next = prev;
-//     prev = curr;
-//     curr = temp;
-//   }
+  //reverse the second half of list
+  let prev = null;
+  let curr = slow;
+  while(curr) {
+    let temp = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = temp;
+  }
 
-//   //checking for palindrome
-//   let firstlist = head;
-//   let secondlist = prev;
-//   while(secondlist) {
-//     if(firstlist.value !== secondlist.value) {
-//           return false;
-//     }
-//     firstlist = firstlist.next;
-//     secondlist = secondlist.next;
-//   }
-//   return true;
-// }
+  //checking for palindrome
+  let firstlist = head;
+  let secondlist = prev;
+  while(secondlist) {
+    if(firstlist.value !== secondlist.value) {
+          return false;
+    }
+    firstlist = firstlist.next;
+    secondlist = secondlist.next;
+  }
+  return true;
+}
 
 
